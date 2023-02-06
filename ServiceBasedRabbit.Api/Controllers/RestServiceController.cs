@@ -22,7 +22,7 @@ namespace ServiceBasedRabbit.Api.Controllers
 
 
 
-        [HttpPost()]
+        [HttpPost("AddUserItem")]
         public async Task<IActionResult> PostUserItemAsync()
         {
             // Validation
@@ -40,7 +40,7 @@ namespace ServiceBasedRabbit.Api.Controllers
 
 
 
-        [HttpDelete("{id}")]
+        [HttpDelete("DeleteUserItem/{id}")]
         public async Task<IActionResult> DeleteUserItemAsync(int id)
         {
             // Validation
