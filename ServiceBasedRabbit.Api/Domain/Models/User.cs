@@ -17,7 +17,7 @@ namespace ServiceBasedRabbit.Api.Domain.Models
 
         public int UserId { get; set; }
         //public Item Item { get; set; }
-        public string Name { get; set; }
+        public string UserName { get; set; }
 
         public ICollection<Item> Items { get; set; }
 
