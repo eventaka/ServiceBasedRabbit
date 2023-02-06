@@ -12,7 +12,6 @@ namespace ServiceBasedRabbit.Api.Infrastructure.DbContexts
         DbSet<User> User { get; set; }
         DbSet<Item> Item { get; set; }
 
-
         Task<int> SaveChanges();
     }
 }

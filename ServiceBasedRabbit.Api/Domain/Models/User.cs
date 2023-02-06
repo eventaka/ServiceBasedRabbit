@@ -21,5 +21,8 @@ namespace ServiceBasedRabbit.Api.Domain.Models
 
         public ICollection<Item> Items { get; set; }
 
+
+
+
     }
 }
