@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ServiceBasedRabbit.Api.Domain.Models
+namespace ServiceBasedRabbit.Domain.Models
 {
     public class Item
     {

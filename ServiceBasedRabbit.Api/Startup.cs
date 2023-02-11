@@ -1,17 +1,12 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
-using ServiceBasedRabbit.Api.Infrastructure.DbContexts;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using ServiceBasedRabbit.Core.Interfaces;
+using ServiceBasedRabbit.Core.Interfaces.MessageBroker;
+using ServiceBasedRabbit.Infrastructure.MessageBroker;
 
 namespace ServiceBasedRabbit.Api
 {
@@ -27,17 +22,14 @@ namespace ServiceBasedRabbit.Api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<AppDbContext>(options =>
-            options.UseSqlServer(
-                Configuration.GetConnectionString("DefaultConnection"),
-                ef => ef.MigrationsAssembly(typeof(AppDbContext).Assembly.FullName)));
-
-            services.AddScoped<IAppDbContext>(provider => provider.GetService<AppDbContext>());
-
             
 
             services.AddControllers();
 
+            services.AddScoped<IRabbitMQPublisher, RabbitMQPublisher>();
+
+            //services.AddMediatR(typeof(CreateUserCommandHandler).GetTypeInfo().Assembly);
+            //services.AddMediatR(Assembly.GetExecutingAssembly());
 
             // Register the Swagger Generator service. This service is responsible for genrating Swagger Documents.
             // Note: Add this service at the end after AddMvc() or AddMvcCore().
@@ -48,12 +40,6 @@ namespace ServiceBasedRabbit.Api
                     Title = "API",
                     Version = "v1",
                     Description = "Description for the API goes here."
-                    //Contact = new OpenApiContact
-                    //{
-                    //    Name = "Ankush Jain",
-                    //    Email = string.Empty,
-                    //    Url = new Uri("https://coderjony.com/"),
-                    //},
                 });
             });
         }

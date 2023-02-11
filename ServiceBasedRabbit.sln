@@ -5,9 +5,7 @@ VisualStudioVersion = 16.0.33214.272
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServiceBasedRabbit.Api", "ServiceBasedRabbit.Api\ServiceBasedRabbit.Api.csproj", "{6A60E35C-10CF-4356-9CF2-20A632F46A6F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServiceBasedRabbit.Application", "ServiceBasedRabbit.Application\ServiceBasedRabbit.Application.csproj", "{58ADD188-5A00-4135-BCF7-0FDC0F842CA1}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServiceBasedRabbit.Domain", "ServiceBasedRabbit.Domain\ServiceBasedRabbit.Domain.csproj", "{FFF3D3DB-10C7-48A0-B3F1-5999A3A0B66E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServiceBasedRabbit.Core", "ServiceBasedRabbit.Application\ServiceBasedRabbit.Core.csproj", "{58ADD188-5A00-4135-BCF7-0FDC0F842CA1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceBasedRabbit.Infrastructure", "ServiceBasedRabbit.Infrastructure\ServiceBasedRabbit.Infrastructure.csproj", "{66781664-E4C0-4DDD-9FEE-9DC630103D92}"
 EndProject
@@ -25,10 +23,6 @@ Global
 		{58ADD188-5A00-4135-BCF7-0FDC0F842CA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{58ADD188-5A00-4135-BCF7-0FDC0F842CA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{58ADD188-5A00-4135-BCF7-0FDC0F842CA1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{FFF3D3DB-10C7-48A0-B3F1-5999A3A0B66E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FFF3D3DB-10C7-48A0-B3F1-5999A3A0B66E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FFF3D3DB-10C7-48A0-B3F1-5999A3A0B66E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FFF3D3DB-10C7-48A0-B3F1-5999A3A0B66E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{66781664-E4C0-4DDD-9FEE-9DC630103D92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{66781664-E4C0-4DDD-9FEE-9DC630103D92}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{66781664-E4C0-4DDD-9FEE-9DC630103D92}.Release|Any CPU.ActiveCfg = Release|Any CPU

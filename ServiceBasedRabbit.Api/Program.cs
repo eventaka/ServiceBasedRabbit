@@ -22,5 +22,6 @@ namespace ServiceBasedRabbit.Api
                 {
                     webBuilder.UseStartup<Startup>();
                 });
+
     }
 }
